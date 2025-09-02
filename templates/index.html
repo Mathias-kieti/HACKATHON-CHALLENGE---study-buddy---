@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>AI STUDY BUDDY</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-        <script src="{{ url_for('static', filename='script.js') }}"></script>
-
-    </head>
-    <body>
-        <h1>AI Study Buddy -Flashcard Generator</h1>
-        <textarea id = "notes" placeholder="Paste your study notes at this area"> </textarea>
-        <br>
-        <!-- Flashcard generator button-->
-        <button onclick="Flashcard_generator()">Generate FlashCards</button>
-
-        <!--container-->
-        <div id = "flashcards"></div>
-
-        <!-- Link to Javascript file-->
-         <script src = "script.js"></script>
-
-    </body>
+<head>
+    <title>AI Study Buddy</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="{{ url_for('static',filename='script.js') }}" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1> AI Study Buddy</h1>
+        <p class="subtitle">Turn your notes into smart flashcards</p>
+        
+        <textarea id="notes" placeholder="Paste your study notes here..."></textarea>
+        <button onclick="Flashcard_generator()">✨ Generate Flashcards</button>
+        
+        <div id="flashcards"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
 </html>

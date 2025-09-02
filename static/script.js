@@ -1,4 +1,3 @@
-// generate function (consistent name)
 async function Flashcard_generator() {
     const notes = document.getElementById("notes").value;
     if (!notes.trim()) {
@@ -23,7 +22,6 @@ async function Flashcard_generator() {
             return;
         }
 
-        // data should be an array of {question,answer}
         displayFlashcards(data);
     } catch (error) {
         console.error("Fetch error:", error);
@@ -31,7 +29,7 @@ async function Flashcard_generator() {
     }
 }
 
-// display function (create cards)
+// display function 
 function displayFlashcards(flashcards) {
     const container = document.getElementById("flashcards");
     container.innerHTML = "";
